@@ -180,3 +180,142 @@ int main() {
 }
 ```
 ![변수사용](https://raw.githubusercontent.com/Seong-Jun1525/C-Project/master/readmeImg/%EB%B3%80%EC%88%98%EC%82%AC%EC%9A%A9.png)
+
+## 형식 지정자
+형식 지정자 | 설명 | 예시
+-- | -- | --
+%d | 10진수 정수를 입출력할 때 사용 | scanf("%d", &i);<br>printf("%d", i);
+%f | 실수형을 입출력할 때 사용 | scanf("%f", &f);<br>printf("%f", f);
+%lf | double형의 실수로 입력할 때 사용 | scanf("%lf", &df);<br>printf("%f", df);
+%c | 문자를 입출력할 때 사용 | scanf("%c", &ch);<br>printf("%c", ch);
+%s | 문자열을 출력할 때 사용 | printf("%s", "Hello");
+
+## 입력받기
+### 그 전에 scanf()함수를 사용하다가 아래와 같은 에러를 해결하는 방법
+```
+'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+```
+
+```
+보안상의 문제때문에 scanf()를 사용할 수 없는 것입니다.
+
+해결방법 1
+scanf() 대신 scanf_s() 사용
+
+해결방법 2
+#define _CRT_SECURE_NO_WARNINGS // 추가
+#include <stdio.h>
+```
+
+### 사칙연산
+```c
+int add;
+int sub;
+int mul;
+int div;
+int remain;
+
+int a;
+int b;
+scanf("%d %d\n", &a, &b); // &: 포인터
+
+add = a + b;
+sub = a - b;
+mul = a * b;
+div = a / b;
+remain = a % b;
+
+printf("사칙연산\n");
+printf("a + b = %d\n", add);
+printf("a - b = %d\n", sub);
+printf("a * b = %d\n", mul);
+printf("a / b = %d\n", div);
+printf("a % b = %d\n", remain);
+
+return 0;
+```
+![scanf](https://github.com/Seong-Jun1525/C-Project/assets/77059720/2908e062-30ef-49a6-b6b4-f864af0586a5)
+
+
+### 덧셈 프로그램
+```c
+int x;
+int y;
+int sum;
+
+printf("첫 번째 숫자: ");
+scanf("%d", &x);
+
+printf("두 번째 숫자: ");
+scanf("%d", &y);
+
+sum = x + y;
+
+printf("두 수의 합: %d\n", sum);
+
+return 0;
+```
+
+### 연봉계산기
+```c
+int ysalary;
+int msalary;
+printf("연봉을 입력하시오");
+scanf("%d", &ysalary);
+
+msalary = ysalary / 12;
+
+printf("월 수령액 %d\n", msalary);
+```
+
+### 원의 면적
+```c
+float radius;
+float area;
+
+printf("반지름을 입력: ");
+scanf("%f", &radius);
+
+area = radius * radius * 3.14;
+printf("원의 면적: %f", area);
+```
+
+### 환율 계산기
+```c
+double rate; // 환율
+double usd; // 달러화
+int krw; // 원화
+
+printf("환율을 입력하세요: ");
+scanf("%lf", &rate);
+printf("\n");
+
+printf("원화금액을 입력하세요: ");
+scanf("%d", &krw);
+printf("\n");
+
+usd = krw / rate;
+
+printf("원화 %d원은 %lf 달러입니다.", krw, usd);
+```
+
+### 사각형의 넓이와 둘레
+```c
+double w;
+double h;
+double area;
+double perimeter;
+
+printf("넓이: ");
+scanf("%lf", &w);
+printf("\n");
+
+printf("높이: ");
+scanf("%lf", &h);
+printf("\n");
+	
+area = w * h;
+perimeter = 2 * (w + h);
+
+printf("면적: %f\n둘레: %f", area, perimeter);
+```
