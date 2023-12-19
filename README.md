@@ -64,9 +64,7 @@ int main(void) {
 ```
 여러 줄을 출력할 때는 `\n`기호를 사용합니다.
 
->= Hello World
-
->= Hello World
+![여러줄 출력하기](https://raw.githubusercontent.com/Seong-Jun1525/C-Project/master/readmeImg/%EB%B3%80%EC%88%98%EC%82%AC%EC%9A%A9.png)
 
 ## 간단한 계산해보기
 ```c
@@ -181,4 +179,4 @@ int main() {
 	return 0;
 }
 ```
-![변수사용](./변수사용.png)
+![변수사용](https://raw.githubusercontent.com/Seong-Jun1525/C-Project/master/readmeImg/%EB%B3%80%EC%88%98%EC%82%AC%EC%9A%A9.png)
