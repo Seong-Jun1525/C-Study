@@ -65,6 +65,7 @@ int main(void) {
 여러 줄을 출력할 때는 `\n`기호를 사용합니다.
 
 >= Hello World
+
 >= Hello World
 
 ## 간단한 계산해보기
