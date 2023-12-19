@@ -62,8 +62,7 @@ int main(void) {
 }
 ```
 여러 줄을 출력할 때는 `\n`기호를 사용합니다.
-
-![여러 줄 출력하기](readmeImg/여러줄 출력하기.png)
+![여러 줄 출력하기](https://raw.githubusercontent.com/Seong-Jun1525/C-Project/master/readmeImg/%EC%97%AC%EB%9F%AC%EC%A4%84%20%EC%B6%9C%EB%A0%A5%ED%95%98%EA%B8%B0.png)
 
 ## 간단한 계산해보기
 ```c
